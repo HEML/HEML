@@ -1,0 +1,62 @@
+#Kidney
+#Neo-Hookean deformable material
+Examples\\Kidney\\rein3d
+0.0035
+3 0.16 0.3
+0.0002 0.0 0.0
+#Interactive_environment
+-30.0
+-20.0 -15.0 -0.0
+0
+#Numerical_simulation
+0.01
+
+
+#Complex cube
+#Saint Venant-Kirchhoff deformable material
+Examples\\CompliCube\\cubesym
+0.00005
+2 0.14 0.03
+0.00005 0.001 0.0
+#Interactive_environment
+-27.0
+-27.0 -27.0 27.0
+25
+#Numerical_simulation
+0.01
+
+
+#Simple cube
+#Neo-Hookean deformable material
+Examples\\SimpleCube\\cube
+1.0
+3 1.4 1.0
+0.0002 0.0 0.0
+#Interactive_environment
+-30.0
+-1.0 -1.0 -1.0
+0
+#Numerical_simulation
+0.001
+
+
+
+
+# Description of Parameters #
+//Input file name and path of 3D mesh model (extension ".t", e.g. "cube" means "cube.t")
+//	The file with extension ".t" is sufficient to define the geometry. Additional files 
+//	are created at first launch, containing information derived from the initial file.
+//Density
+// MATERIAL_TYPE : 1=MS3D (Mass-Spring 3D), 
+	 	   2=STVK (Saint Venant-Kirchhoff), 
+		   3=NH (Néo-Hookéen),
+	           4=Mooney (Mooney-Rivlin)
+and its parameters:
+	Saint Venant-Kirchhoff : Nu,E (Lambda = (Nu*E)/((1.-2.*Nu)*(1.+Nu)); Mu = E/(2.*(1.+Nu))
+	Néo-Hookéen : mu0(mu0=2*c1),lambda0
+	Mooney-Rivlin : c01, c10
+// damping parameter, young coefficient, volume stiffness
+// Barrier plane 'yplan'
+// The initial coordinates of cursor point: Curs_Pos[0], Curs_Pos[1], Curs_Pos[2]
+// The number of nodes to fix
+// time step dt
